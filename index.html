@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Italianno&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="welcome-page">
+        <div class="welcome-content">
+            <h1 class="welcome-title">My Dearest Love,</h1>
+            <p class="welcome-message">Shall we dance through another year of memories?</p>
+            <div class="button-group">
+                <button id="enter-btn" class="btn btn-enter"><i class="fas fa-heart"></i> Yes, Always</button>
+                <button id="exit-btn" class="btn btn-exit">Not Yet</button>
+            </div>
+        </div>
+        <div class="bg-animation">
+            <div class="rose-petals"></div>
+        </div>
+
+    </div>
+
+    <div id="login-page" style="display: none;">
+        <div class="login-wrapper">
+            <h2 class="login-title">A Whisper of Our Date</h2>
+            <input type="date" id="anniversary-date" class="date-input">
+            <button id="login-btn" class="btn btn-login"><i class="fas fa-key"></i> Open Our Hearts</button>
+            <p id="login-error" class="error-message">Try again, my love.</p>
+        </div>
+         <div class="login-overlay"></div>
+    </div>
+
+    <div id="anniversary-page" style="display: none;">
+        <div class="anniversary-wrapper">
+            <h1 class="anniversary-title">Happy Anniversary, My Soulmate!</h1>
+
+            <div id="timer" class="timer">
+                <p class="timer-preface">Our eternal flame has burned for:</p>
+                <div class="timer-container">
+                    <div class="time-unit"><span id="years" class="time-value"></span> <span
+                            class="time-label">Years</span></div>
+                    <div class="time-unit"><span id="months" class="time-value"></span> <span
+                            class="time-label">Months</span></div>
+                    <div class="time-unit"><span id="days" class="time-value"></span> <span
+                            class="time-label">Days</span></div>
+                    <div class="time-unit"><span id="hours" class="time-value"></span> <span
+                            class="time-label">Hours</span></div>
+                    <div class="time-unit"><span id="minutes" class="time-value"></span> <span
+                            class="time-label">Minutes</span></div>
+                    <div class="time-unit"><span id="seconds" class="time-value"></span> <span
+                            class="time-label">Seconds</span></div>
+                </div>
+            </div>
+
+            <div class="message-container">
+              <div class="message-scroll">
+                <p id="anniversary-wish" class="anniversary-message">
+                    Another year with my favorite person. My love, each moment with you is a verse in our epic poem. Being with you has been the best adventure. You are the sun that lights my world,
+                    the moon that guides my nights.  
+                <p id="anniversary-wish" class="anniversary-message"> Thank you for being my best friend, my lover, my everything.</p>
+                <p id="anniversary-wish" class="anniversary-message">  Thank you for filling my life with so much joy and love. <b>Happy anniversary, my darling. You're my everything.</b> </p>
+                </p>
+              </div>
+            </div>
+
+            <button id="gallery-btn" class="btn btn-gallery">
+                <i class="fas fa-camera-retro"></i> Our Timeless Moments
+            </button>
+            
+        </div>
+         <div class="anniversary-overlay"></div>
+
+
+    </div>
+
+    <div id="gallery-page" style="display: none;">
+        <div class="gallery-wrapper">
+           <h1 class="gallery-title">Echoes of Our Love</h1>
+           <div class="polaroid-container">
+            <div id="photo-container" class="photo-grid">
+               </div>
+            </div>
+            <p id="stylist-note" class="gallery-note">Many more memories to store.....</p>
+           <button id="back-btn" class="btn btn-back">
+             <i class="fas fa-heart"></i> Return to Our Celebration
+           </button>
+        </div>
+         <div class="gallery-overlay"></div>
+
+    </div>
+
+
+    <audio id="bg-music" loop autoplay>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="hearts"></div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
