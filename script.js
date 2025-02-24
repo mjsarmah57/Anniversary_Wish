@@ -198,3 +198,62 @@ function createHearts() {
         heartsContainer.appendChild(heart);
     }
 }
+
+// Disclaimer: This code attempts to discourage screenshots but is not foolproof.
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Disable right-click (easy to bypass)
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Attempt to disable Print Screen key (less reliable)
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'PrintScreen' || e.keyCode === 44) {
+      e.preventDefault();
+      alert("Screenshots are not allowed."); // Or any other user feedback
+    }
+  });
+
+  // Example of adding a basic watermark (visible watermark)
+  function addWatermark(element) {
+    if (!element) return; // Check if the element exists
+
+    const watermark = document.createElement('div');
+    watermark.textContent = 'Protected Content';
+    watermark.style.position = 'absolute';
+    watermark.style.top = '50%';
+    watermark.style.left = '50%';
+    watermark.style.transform = 'translate(-50%, -50%) rotate(-45deg)';
+    watermark.style.color = 'rgba(255, 0, 0, 0.3)'; // Semi-transparent red
+    watermark.style.fontSize = '2em';
+    watermark.style.pointerEvents = 'none'; // Prevent interaction
+    watermark.style.userSelect = 'none';
+
+    element.style.position = 'relative'; // Make element a positioning context
+    element.appendChild(watermark);
+  }
+
+  // Apply watermark to specific elements (e.g., images or divs)
+  const protectedImages = document.querySelectorAll('.protected-image'); // Or use a class
+  protectedImages.forEach(addWatermark);
+
+  // Example of low resolution image replacement. You will need to make sure the
+  // low resolution images are available.
+  const lowResImages = document.querySelectorAll('.high-res-image');
+
+  lowResImages.forEach(image => {
+    const lowResSrc = image.getAttribute('data-lowres');
+    if (lowResSrc) {
+      image.src = lowResSrc;
+    }
+  });
+
+});
+
+// Example of HTML for the low resolution image replacement.
+// <img src="high-res-image.jpg" class="high-res-image" data-lowres="low-res-image.jpg">
+
+// Example of HTML for the watermarked images.
+// <img src="protected-image.jpg" class="protected-image">
+// <div class="protected-image"> This div has protected content</div>
