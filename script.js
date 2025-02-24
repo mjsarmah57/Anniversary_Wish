@@ -128,6 +128,17 @@ function addPhotos() {
         { url: 'Photo26.jpg' },
         { url: 'Photo28.jpg' },
         { url: 'Photo29.jpg' },
+        { url: 'Photo30.jpg' },
+        { url: 'Photo31.jpg'},
+        { url: 'Photo32.jpg'},
+        { url: 'Photo33.jpg' },
+        { url: 'Photo34.jpg'},
+        { url: 'Photo35.jpeg' },
+        { url: 'Photo36.jpg' },
+        { url: 'Photo37.jpg' },
+        { url: 'Photo38.jpg' },
+         { url: 'Photo39.jpg' },
+         { url: 'Photo40.jpg' },
      //   { url: 'Image/Photo29.jpg', date: '2024-10-27', description: 'At Kolkata Airport, waiting for flight!' },
         
 
