@@ -133,7 +133,7 @@ function addPhotos() {
         { url: 'Photo32.jpg'},
         { url: 'Photo33.jpg' },
         { url: 'Photo34.jpg'},
-        { url: 'Photo35.jpeg' },
+        { url: 'Photo35.jpg' },
         { url: 'Photo36.jpg' },
         { url: 'Photo37.jpg' },
         { url: 'Photo38.jpg' },
